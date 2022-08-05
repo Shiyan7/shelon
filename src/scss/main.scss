@@ -1,0 +1,18 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// components
+@import "./components/lines";
+@import "./components/g-btn";
+@import "./components/g-title";
+@import "./components/g-link";
+
+// modules
+@import "./modules/header";
+@import "./modules/nav";
+@import "./modules/hero";
+@import "./modules/about-section";
+@import "./modules/benefits";

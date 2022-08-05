@@ -1,0 +1,22 @@
+.g-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-main);
+  font-weight: 500;
+
+  &:hover {
+    svg {
+      transform: translateX(2px);
+    }
+  }
+
+  svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    object-fit: cover;
+    fill: currentColor;
+    transition: transform 0.3s;
+  }
+}

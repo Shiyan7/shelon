@@ -1,0 +1,25 @@
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-lines);
+
+    @media (max-width: 1024px) {
+      &:nth-child(-n+2) {
+        display: none;
+      }
+    }
+  }
+}
