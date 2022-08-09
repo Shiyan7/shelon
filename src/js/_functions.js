@@ -2,8 +2,8 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+// import { mobileCheck } from "./functions/mobile-check";
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -18,7 +18,7 @@ console.log(mobileCheck())
 // window.addEventListener('resize', func);
 
 // Фикс фулскрин-блоков
-// import './functions/fix-fullheight';
+import './functions/fix-fullheight';
 
 // Реализация бургер-меню
 // import { burger } from './functions/burger';
