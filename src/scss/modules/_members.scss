@@ -133,6 +133,8 @@
   &-item {
 
     &__caption {
+      font-size: 16px;
+      line-height: 22.4px;
       color: var(--color-gray);
 
       @media (max-width: 576px) {

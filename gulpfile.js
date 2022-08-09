@@ -67,18 +67,6 @@ const svgSprites = () => {
         },
       })
     )
-    .pipe(
-      cheerio({
-        run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: {
-          xmlMode: true
-        },
-      })
-    )
     .pipe(replace('&gt;', '>'))
     .pipe(svgSprite({
       mode: {
@@ -247,9 +235,6 @@ const htmlInclude = () => {
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file'
-    }))
-    .pipe(typograf({
-      locale: ['ru', 'en-US']
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
