@@ -21,6 +21,11 @@
     height: auto;
     margin-bottom: 40px;
 
+    @media (max-width: 576px) {
+      height: 150px;
+      margin-bottom: 30px;
+    }
+
     img {
       display: block;
       width: 100%;
