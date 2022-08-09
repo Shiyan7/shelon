@@ -1,18 +1,16 @@
-import vars from '../_vars';
-
 export const enableScroll = () => {
-  const fixBlocks = document?.querySelectorAll('.fixed-block');
-  const body = document.body;
-  const pagePosition = parseInt(vars.bodyEl.dataset.position, 10);
-  fixBlocks.forEach(el => { el.style.paddingRight = '0px'; });
-  vars.bodyEl.style.paddingRight = '0px';
+  if (document.body.hasAttribute("data-body-scroll-fix")) {
 
-  vars.bodyEl.style.top = 'auto';
-  vars.bodyEl.classList.remove('dis-scroll');
-  window.scroll({
-    top: pagePosition,
-    left: 0
-  });
-  vars.bodyEl.removeAttribute('data-position');
-  vars.htmlEl.style.scrollBehavior = 'smooth';
+    let scrollPosition = document.body.getAttribute("data-body-scroll-fix");
+
+    document.body.removeAttribute("data-body-scroll-fix");
+
+    document.body.style.overflow = "";
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.width = "";
+
+    window.scroll(0, scrollPosition);
+  }
 }

@@ -1,3 +1,18 @@
 .g-btn {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--color-white);
+  padding: 15px 40px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
 
+  &--fill {
+    background-color: var(--color-main);
+
+    &:hover {
+      background-color: var(--color-main-dark);
+    }
+  }
 }

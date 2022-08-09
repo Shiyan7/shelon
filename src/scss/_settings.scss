@@ -58,6 +58,10 @@ a {
   border-radius: 0;
   background-color: #fff;
 
+  &::placeholder {
+    opacity: 1;
+  }
+
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
@@ -85,18 +89,4 @@ a {
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
-}
-
-.dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  overscroll-behavior: none;
-}
-
-.page--ios .dis-scroll {
-  position: relative;
 }

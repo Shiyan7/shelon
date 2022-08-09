@@ -1,14 +1,19 @@
-import vars from '../_vars';
-
 export const disableScroll = () => {
-  const fixBlocks = document?.querySelectorAll('.fixed-block');
-  const pagePosition = window.scrollY;
-  const paddingOffset = `${(window.innerWidth - vars.bodyEl.offsetWidth)}px`;
 
-  vars.htmlEl.style.scrollBehavior = 'none';
-  fixBlocks.forEach(el => { el.style.paddingRight = paddingOffset; });
-  vars.bodyEl.style.paddingRight = paddingOffset;
-  vars.bodyEl.classList.add('dis-scroll');
-  vars.bodyEl.dataset.position = pagePosition;
-  vars.bodyEl.style.top = `-${pagePosition}px`;
+  setTimeout(function () {
+
+    if (!document.body.hasAttribute("data-body-scroll-fix")) {
+
+      let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+      document.body.setAttribute("data-body-scroll-fix", scrollPosition);
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = "-" + scrollPosition + "px";
+      document.body.style.left = "0";
+      document.body.style.width = "100%";
+
+    }
+
+  }, 15);
 }
