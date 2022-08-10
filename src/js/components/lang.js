@@ -3,11 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const langDropdown = document.querySelector('.lang-dropdown');
   const dropdownBtns = document.querySelectorAll('.lang-dropdown__btn')
 
-  langBtn.addEventListener('click', e => {
-    e.currentTarget.classList.toggle('active')
-    langDropdown.classList.toggle('active')
-  })
-
   function handleChangeLang (e) {
     const target = e.target.textContent
     const btn = langBtn.querySelector('span')
@@ -27,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', e => {
     if(e.target.closest(".lang__btn")) {
-      langBtn.classList.add('active')
-      langDropdown.classList.add('active')
+      langBtn.classList.toggle('active')
+      langDropdown.classList.toggle('active')
     } else {
       langBtn.classList.remove('active')
       langDropdown.classList.remove('active')
