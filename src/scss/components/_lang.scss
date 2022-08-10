@@ -1,0 +1,61 @@
+.lang {
+  position: relative;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: var(--color-white);
+    text-transform: uppercase;
+
+    &.active {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    svg {
+      display: block;
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+      transition: transform 0.3s;
+    }
+  }
+
+  &-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -14px;
+    padding: 10px 20px;
+    background-color: var(--color-white);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__btn {
+      text-transform: uppercase;
+      color: var(--color-text);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+
+      &.active {
+        color: var(--color-gray);
+      }
+    }
+  }
+}

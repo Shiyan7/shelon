@@ -6,11 +6,13 @@
 
 // components
 @import "./components/lines";
+@import "./components/g-burger";
 @import "./components/g-btn";
 @import "./components/g-title";
 @import "./components/g-link";
 @import "./components/g-input";
 @import "./components/post-item";
+@import "./components/lang";
 
 // modules
 @import "./modules/header";
@@ -22,3 +24,4 @@
 @import "./modules/news-section";
 @import "./modules/feedback";
 @import "./modules/footer";
+@import "./modules/modal";

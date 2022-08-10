@@ -1,0 +1,45 @@
+<div class="modal">
+  <div class="modal__container" role="dialog" aria-modal="true" data-modal-target="request-call">
+    <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+      <svg aria-hidden="true">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <h2 class="g-title modal__title">Заказать звонок</h2>
+    <p class="modal__desc">Оставьте заявку и в ближайшее время наш менеджер свяжется с вами для уточнений деталей.</p>
+    <form action="#" class="modal-form" id="request-form">
+      <label class="g-input g-input--required modal-form__input">
+        <span class="g-input__caption">ФИО</span>
+        <input type="text" class="input-reset g-input__input validate-name" name="name" placeholder="Введите ФИО">
+      </label>
+      <label class="g-input g-input--required modal-form__input">
+        <span class="g-input__caption">Телефон</span>
+        <input type="tel" class="input-reset g-input__input mask-input validate-tel" name="tel" placeholder="Введите номер телефона">
+      </label>
+      <label class="g-input modal-form__input">
+        <span class="g-input__caption">E-mail</span>
+        <input type="email" class="input-reset g-input__input mask-input" name="email" placeholder="example@mail.com">
+      </label>
+      <label class="g-input modal-form__input">
+        <span class="g-input__caption">Комментарий</span>
+        <input type="text" class="input-reset g-input__input" name="message" placeholder="Дополнительная информация">
+      </label>
+      <div class="modal-form__bottom">
+        <button class="btn-reset g-btn g-btn--fill modal__btn">Оформить заявку</button>
+        <p class="modal-form__desc">
+          Отправляя форму, вы даете согласие на обработку своих <a href="policy.html">персональных данных</a>
+        </p>
+      </div>
+    </form>
+  </div>
+  <div class="modal__container modal__container--thank" role="dialog" aria-modal="true" data-modal-target="thank">
+    <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+      <svg aria-hidden="true">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <h2 class="g-title modal__title">Спасибо за заявку!</h2>
+    <p class="modal__desc">Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
+    <a href="/" class="g-btn g-btn--fill modal__btn">На главную</a>
+  </div>
+</div>

@@ -30,8 +30,34 @@
       </ul>
     </nav>
     <div class="header__right">
-      <button class="btn-reset g-btn g-btn--stroke header__btn">
+      <button class="btn-reset header__tel" data-modal-path="request-call">
+        <svg>
+          <use xlink:href="img/sprite.svg#phone"></use>
+        </svg>
+      </button>
+      <button class="btn-reset g-btn g-btn--stroke header__btn" data-modal-path="request-call">
         Заказать звонок
+      </button>
+      <div class="lang header__lang">
+        <button class="btn-reset lang__btn">
+          <span>Ru</span>
+          <svg>
+            <use xlink:href="img/sprite.svg#arrow-down"></use>
+          </svg>
+        </button>
+        <ul class="list-reset lang-dropdown">
+          <li class="lang-dropdown__item">
+            <button class="btn-reset lang-dropdown__btn active">Ru</button>
+          </li>
+          <li class="lang-dropdown__item">
+            <button class="btn-reset lang-dropdown__btn">En</button>
+          </li>
+        </ul>
+      </div>
+      <button class="btn-reset g-burger header__burger" aria-label="Открыть меню" data-burger>
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#burger"></use>
+        </svg>
       </button>
     </div>
   </div>

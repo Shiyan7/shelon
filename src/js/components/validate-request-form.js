@@ -33,4 +33,4 @@ const onSuccess = () => {
   modal.open("thank")
 }
 
-document.addEventListener("DOMContentLoaded", () => validateForms('#feedback-form', rules, onSuccess))
+document.addEventListener("DOMContentLoaded", () => validateForms('#request-form', rules, onSuccess))
