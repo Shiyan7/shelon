@@ -38,6 +38,11 @@
       width: 140px;
       height: 35px;
     }
+
+    @media (max-width: 360px) {
+      width: 106px;
+      height: 26px;
+    }
   }
 
   &__left {
@@ -65,11 +70,21 @@
       font-size: 12px;
       line-height: 16.8px;
     }
+
+    @media (max-width: 360px) {
+      padding-left: 20px;
+      margin-left: 20px;
+      font-size: 11px;
+      line-height: 15.7px;
+    }
   }
 
   &__col {
     @media (max-width: 1024px) {
       grid-column: 2 span;
+      &:last-child {
+        grid-column: 4 span;
+      }
     }
   }
 
