@@ -4,6 +4,7 @@
   --font-family: "Roboto", sans-serif;
   --content-width: 1440px;
   --container-offset: 20px;
+  --min-width: 320px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
