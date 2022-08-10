@@ -34,6 +34,12 @@
   }
 
   &__logo {
+    color: var(--color-white);
+
+    svg {
+      fill: currentColor;
+    }
+
     @media (max-width: 576px) {
       width: 140px;
       height: 35px;

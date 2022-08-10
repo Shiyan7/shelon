@@ -2,12 +2,13 @@
   display: block;
   width: 24px;
   height: 24px;
+  color: var(--color-white);
 
   svg {
     display: block;
     width: 100%;
     height: 100%;
-    fill: var(--color-white);
+    fill: currentColor;
     object-fit: cover;
   }
 }

@@ -16,8 +16,8 @@
     font-size: 16px;
     line-height: 22.4px;
     text-transform: uppercase;
-    color: var(--color-white);
-    transition: opacity 0.3s;
+    color: var(--header-color);
+    transition: opacity 0.3s, color 0.3s;
 
     &:hover {
       opacity: 0.8;
