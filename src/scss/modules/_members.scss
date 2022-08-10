@@ -82,11 +82,12 @@
     @media (max-width: 1024px) {
       width: 100%;
       padding: 120px var(--container-offset) 0;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
 
     @media (max-width: 576px) {
       padding-top: 80px;
+      margin-bottom: 40px;
     }
   }
 
@@ -131,6 +132,14 @@
   }
 
   &-item {
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @media (max-width: 576px) {
+        margin-bottom: 30px;
+      }
+    }
 
     &__caption {
       font-size: 16px;

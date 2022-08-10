@@ -6,13 +6,23 @@
   color: var(--color-white);
   padding: 15px 40px;
   text-transform: uppercase;
-  transition: background-color 0.3s;
 
   &--fill {
+    transition: background-color 0.3s;
     background-color: var(--color-main);
 
     &:hover {
       background-color: var(--color-main-dark);
+    }
+  }
+
+  &--stroke {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border: 1px solid var(--color-white);
+
+    &:hover {
+      border-color: var(--color-main);
+      background-color: var(--color-main);
     }
   }
 }

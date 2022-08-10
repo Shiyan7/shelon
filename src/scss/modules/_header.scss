@@ -4,6 +4,27 @@
   left: 0;
   width: 100%;
   z-index: 100;
+
+  &__container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__left {
+    grid-column: 3 span;
+  }
+
+  &__nav {
+    grid-column: 6 span;
+  }
+
+  &__right {
+    grid-column: 3 span;
+  }
 }
 
 

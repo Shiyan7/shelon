@@ -6,11 +6,21 @@
 
   &__item {
     &:not(:last-child) {
-
+      margin-right: 80px;
     }
   }
 
   &__link {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.4px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    transition: opacity 0.3s;
 
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
