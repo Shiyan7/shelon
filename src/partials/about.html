@@ -1,0 +1,95 @@
+<section class="about">
+  <div class="main-hero">
+    @include('./lines.html')
+    <div class="container main-hero__container">
+      <h1 class="g-title g-title--xl g-title--white g-title--shape main-hero__title">О компании</h1>
+      <p class="main-hero__desc">SHELON — динамично развивающийся лесопромышленный комплекс.</p>
+    </div>
+    <picture>
+      <source srcset="img/about-bg.avif" type="image/avif">
+      <source srcset="img/about-bg.webp" type="image/webp">
+      <img loading="lazy" src="img/about-bg.jpg" class="main-hero__image" alt="О компании">
+    </picture>
+  </div>
+  <div class="container container--lines about__container">
+    @include('./lines.html')
+    <ul class="list-reset g-breadcrumbs">
+      <li class="g-breadcrumbs__item">
+        <a href="index.html" class="g-breadcrumbs__link">Главная</a>
+      </li>
+      <li class="g-breadcrumbs__item">
+        <a class="g-breadcrumbs__link">О компании</a>
+      </li>
+    </ul>
+    <div class="main-item">
+      <div class="main-item__left">
+        <h2 data-da=".main-item, 1024, last" class="g-title g-title--lg main-item__title">Лесопромышленный комплекс <span>SHELON</span></h2>
+        <p class="main-item__desc">SHELON — динамично развивающийся лесопромышленный комплекс, который включает в себя интегрированные современные предприятия, дополняющие друг друга и обеспечивающие полный цикл лесопереработки.</p>
+        <ul class="list-reset main-list">
+          <li class="main-list__item">
+            «Дедовичская Лесная Компания» осуществляет ответственную лесозаготовку и эффективное лесовосстановление
+          </li>
+          <li class="main-list__item">
+            Лесной питомник «Экополис» ежегодно выращивает до 5 млн сеянцев хвойных пород деревьев с закрытой корневой системой
+          </li>
+          <li class="main-list__item">
+            Лесозавод «Судома» реализует безотходное высокотехнологичное производство современных экологичных материалов для строительной и мебельной индустрий.
+          </li>
+        </ul>
+      </div>
+      <picture>
+        <source srcset="img/shelon.avif" type="image/avif">
+        <source srcset="img/shelon.webp" type="image/webp">
+        <img loading="lazy" src="img/shelon.jpg" class="main-item__image" width="720" height="500" alt="Лесопромышленный комплекс SHELON">
+      </picture>
+    </div>
+  </div>
+</section>
+<section class="about-section about__about-section">
+  @include('./lines.html')
+  <div class="container about-section__container">
+    <div class="about-section__top">
+      <h2 class="g-title g-title--lg about-section__title">
+        Работаем на рынке леспромышенности <span>с 2005 года</span>
+      </h2>
+      <div class="about-section__right">
+        <div class="about-section__desc">
+          <p>SHELON — динамично развивающийся лесопромышленный комплекс, который включает в себя интегрированные современные предприятия, дополняющие друг друга и обеспечивающие полный цикл лесопереработки.</p>
+          <p>Предприятия лесопромышленного комплекса SHELON внедряют модель интенсивного лесопользования с замещением лиственных пород деревьев более ценными —  хвойными, что улучшает породный и качественный состав лесного фонда.</p>
+        </div>
+        <a href="#" class="g-link about-section__link">
+          О компании
+          <svg>
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <ul class="list-reset about-list about-section__list">
+      <li class="about-list__item">
+        <h3 class="g-title g-title--md g-title--shape about-list__title">
+          <b>150</b> тыс. м<sup>3</sup>
+        </h3>
+        <p class="about-list__desc">Годовая мощность по лесопилению</p>
+      </li>
+      <li class="about-list__item">
+        <h3 class="g-title g-title--md g-title--shape about-list__title">
+          <b>100</b> %
+        </h3>
+        <p class="about-list__desc">Освоение выделенного лесного фонда</p>
+      </li>
+      <li class="about-list__item">
+        <h3 class="g-title g-title--md g-title--shape about-list__title">
+          до <b>5</b> млн.
+        </h3>
+        <p class="about-list__desc">Растений высаживается в год</p>
+      </li>
+      <li class="about-list__item">
+        <h3 class="g-title g-title--md g-title--shape about-list__title">
+          <b>1200</b> тонн
+        </h3>
+        <p class="about-list__desc">Изделий из ДПК производится в год</p>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -35,6 +35,8 @@ a {
 
 .site-container {
   overflow: hidden;
+
+  // @include footerToBottom();
 }
 
 .btn-reset {
@@ -84,6 +86,11 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  &--lines {
+    position: relative;
+    --color-lines: #f5f5f5;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

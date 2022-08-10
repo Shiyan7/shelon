@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   new Swiper('.members-slider__main', {
     modules: [Thumbs, Autoplay],
+    spaceBetween: 15,
+    slidesPerView: 1,
     autoplay: {
       delay: 3000
     },
-    spaceBetween: 15,
     breakpoints: {
       577: {
         spaceBetween: 20
       }
     },
-    slidesPerView: 1,
     thumbs: {
       swiper: membersSliderNav,
     }

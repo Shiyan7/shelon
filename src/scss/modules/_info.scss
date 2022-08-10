@@ -1,0 +1,46 @@
+.info {
+
+  &__container {
+    position: relative;
+    padding-bottom: 150px;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 120px;
+    }
+
+    @media (max-width: 576px) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22.4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+      line-height: 19.6px;
+      margin-bottom: 10px;
+    }
+
+    &.active {
+      overflow: visible;
+      -webkit-line-clamp: initial;
+    }
+  }
+
+  &__more {
+    &:hover {
+      svg {
+        transform: translateY(2px);
+      }
+    }
+  }
+}

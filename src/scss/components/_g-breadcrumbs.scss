@@ -1,0 +1,54 @@
+.g-breadcrumbs {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (max-width: 1024px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__item {
+    position: relative;
+    display: inline;
+
+    &:not(:last-child) {
+      margin-right: 28px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 1px;
+        background-color: var(--color-gray);
+        right: -18px;
+        top: 9px;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 14px;
+    line-height: 19.6px;
+    color: var(--color-gray);
+    transition: color 0.3s;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+      line-height: 25.2px;
+    }
+
+    &[href] {
+      opacity: 1;
+
+      &:hover {
+        color: var(--color-text);
+
+        &:before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

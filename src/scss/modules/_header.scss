@@ -30,14 +30,10 @@
     height: 60px;
   }
 
-  &--fixed {
+  &--light,
+  &--main {
     --header-color: var(--color-text);
-    position: fixed;
     background-color: var(--color-white);
-
-    @media (min-width: 577px) {
-      height: 72px;
-    }
 
     .header__btn {
       color: var(--color-main);
@@ -60,6 +56,15 @@
         }
       }
     }
+  }
+
+  &--fixed {
+    position: fixed;
+
+    @media (min-width: 577px) {
+      height: 72px;
+    }
+
   }
 
   &__container {

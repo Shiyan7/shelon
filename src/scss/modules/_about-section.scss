@@ -90,3 +90,46 @@
   }
 }
 
+.about-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1024px) {
+    row-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    row-gap: 20px;
+  }
+
+  @media (max-width: 360px) {
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    line-height: 22.4px;
+    padding-left: 42px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 19.6px;
+      padding-left: 33px;
+    }
+
+    @media (max-width: 576px) {
+      padding-left: 23px;
+      max-width: 95%;
+    }
+  }
+}

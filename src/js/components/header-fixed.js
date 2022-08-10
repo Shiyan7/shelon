@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let scrollDistance = window.scrollY;
 
     if (scrollDistance > lastScrollTop) {
-      header.classList.add('header--fixed');
+      header?.classList.add('header--fixed');
+      header?.classList.add('header--light');
     }
 
     if (scrollDistance === 0) {
-      header.classList.remove('header--fixed');
+      header?.classList.remove('header--fixed');
+      header?.classList.remove('header--light');
     }
 
     lastScrollTop = scrollDistance;
