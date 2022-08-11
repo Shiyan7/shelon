@@ -1,8 +1,30 @@
 .g-burger {
+  position: relative;
   display: block;
   width: 24px;
   height: 24px;
-  color: var(--color-white);
+  color: var(--header-color);
+
+  &.burger--active {
+    svg {
+      display: none;
+    }
+
+    &:before {
+      display: block;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    display: none;
+    background-image: url(../img/svg/cross.svg);
+  }
 
   svg {
     display: block;

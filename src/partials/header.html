@@ -1,3 +1,4 @@
+<div class="overlay" data-menu-overlay></div>
 <header class="header">
   <div class="container header__container">
     <div class="header__left">
@@ -14,10 +15,27 @@
             О компании
           </a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item nav__item--dropdown">
           <a href="partners.html" class="nav__link">
             Участники
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+            </svg>
           </a>
+          <ul class="list-reset nav-dropdown">
+            <li class="nav-dropdown__item">
+              <a href="sudoma.html" class="nav-dropdown__link">Sudoma</a>
+            </li>
+            <li class="nav-dropdown__item">
+              <a href="#" class="nav-dropdown__link">Дедовичская Лесная Компания</a>
+            </li>
+            <li class="nav-dropdown__item">
+              <a href="#" class="nav-dropdown__link">Экополис</a>
+            </li>
+            <li class="nav-dropdown__item">
+              <a href="#" class="nav-dropdown__link">Варяжский композит</a>
+            </li>
+          </ul>
         </li>
         <li class="nav__item">
           <a href="news.html" class="nav__link">
@@ -56,11 +74,63 @@
           </li>
         </ul>
       </div>
-      <button class="btn-reset g-burger header__burger" aria-label="Открыть меню" data-burger>
+      <button class="btn-reset header__burger">
         <svg aria-hidden="true">
           <use xlink:href="img/sprite.svg#burger"></use>
         </svg>
       </button>
+      <button class="btn-reset g-burger" aria-label="Открыть меню" data-burger>
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#burger"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="menu" data-menu>
+    <div class="menu__content">
+      <ul class="list-reset menu-list">
+        <li class="menu-list__item">
+          <a href="#" class="g-title g-title--sm menu-list__link">
+            О компании
+          </a>
+        </li>
+        <li class="menu-list__item accordion open">
+          <div class="menu-list__accordion">
+            <a href="partners.html" class="g-title g-title--sm menu-list__link">
+              Участники
+            </a>
+            <button class="btn-reset menu-list__arrow accordion__control" aria-expanded="true">
+              <svg class="menu-list__icon">
+                <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="list-reset menu-dropdown accordion__content" aria-hidden="false">
+            <li class="menu-dropdown__item">
+              <a href="sudoma.html" class="menu-dropdown__link">Sudoma</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link">ДЛК</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link">Экополис</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link">ДПК</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-list__item">
+          <a href="news.html" class="g-title g-title--sm menu-list__link">
+            Новости
+          </a>
+        </li>
+        <li class="menu-list__item">
+          <a href="contacts.html" class="g-title g-title--sm menu-list__link">
+            Контакты
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </header>

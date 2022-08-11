@@ -1,5 +1,6 @@
 .lang {
   position: relative;
+  z-index: 101;
 
   &__btn {
     display: flex;
@@ -10,6 +11,7 @@
     line-height: 22.4px;
     color: var(--header-color);
     text-transform: uppercase;
+    transition: color 0.3s;
 
     &.active {
       svg {
