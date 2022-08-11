@@ -33,11 +33,6 @@
     color: var(--color-gray);
     transition: color 0.3s;
 
-    @media (max-width: 576px) {
-      font-size: 14px;
-      line-height: 25.2px;
-    }
-
     &[href] {
       opacity: 1;
 

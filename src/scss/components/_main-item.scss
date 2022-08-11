@@ -37,6 +37,7 @@
 
       @media (max-width: 1024px) {
         margin-right: 0;
+        padding-top: 0;
       }
     }
 
@@ -45,6 +46,11 @@
 
       @media (max-width: 1024px) {
         max-width: 600px;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 20px;
       }
     }
 
