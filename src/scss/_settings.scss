@@ -90,6 +90,10 @@ a {
   &--lines {
     position: relative;
     --color-lines: #f5f5f5;
+
+    .lines {
+      z-index: -1;
+    }
   }
 }
 

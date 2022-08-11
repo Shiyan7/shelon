@@ -1,0 +1,30 @@
+<section class="work">
+  <div class="main-hero">
+    @include('./lines.html')
+    <div class="container main-hero__container">
+      <h1 class="g-title g-title--xl g-title--white g-title--shape main-hero__title">Карьера</h1>
+      <p class="main-hero__desc">SHELON — динамично развивающийся лесопромышленный комплекс.</p>
+    </div>
+    <picture>
+      <source srcset="img/main-bg.avif" type="image/avif">
+      <source srcset="img/main-bg.webp" type="image/webp">
+      <img loading="lazy" src="img/main-bg.jpg" class="main-hero__image" alt="Карьера">
+    </picture>
+  </div>
+  <div class="container container--lines work__container">
+    @include('./lines.html')
+    <ul class="list-reset g-breadcrumbs">
+      <li class="g-breadcrumbs__item">
+        <a href="index.html" class="g-breadcrumbs__link">Главная</a>
+      </li>
+      <li class="g-breadcrumbs__item">
+        <a class="g-breadcrumbs__link">Карьера</a>
+      </li>
+    </ul>
+    <div class="work__row">
+      <p class="work__desc">Благодаря непрерывному динамичному росту SHELON регулярно объявляет конкурс на самые разнообразные должности. На предприятиях холдинга востребованы высококвалифицированные специалисты в области лесозаготовки, лесовосстановления и деревообработки, имеющие опыт работы в аналогичных компаниях. Помимо этого, в SHELON актуальны вакансии в области коммерции и для административного персонала. </p>
+      <p class="work__desc">Мы заинтересованы как в опытных профессионалах, так и в перспективных талантливых кадрах, готовых учиться, впитывать накопленный компанией опыт, генерировать идеи, искать нестандартные решения. Мы ждем в нашей команде энергичных, нацеленных на результат сотрудников, готовых вместе с нами идти к успеху!</p>
+    </div>
+    <a href="#" class="g-btn g-btn--fill work__link">вакансии на hh.ru</a>
+  </div>
+</section>

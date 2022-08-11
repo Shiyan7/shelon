@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
       preset: 'islands#greenDotIconWithCaption'
     });
 
+    map.behaviors.disable(["scrollZoom"]);
+
     map.geoObjects.add(placemark);
   }
 
