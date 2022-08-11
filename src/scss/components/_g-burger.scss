@@ -5,6 +5,10 @@
   height: 24px;
   color: var(--header-color);
 
+  @media (min-width: 1201px) {
+    display: none;
+  }
+
   &.burger--active {
     svg {
       display: none;
