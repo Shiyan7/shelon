@@ -29,8 +29,6 @@
   &__map {
     margin: 0 auto;
     max-width: calc(1620px + (var(--container-offset) * 2));
-
-
     padding-bottom: 150px;
 
     @media (max-width: 1024px) {
