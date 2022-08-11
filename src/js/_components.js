@@ -6,3 +6,4 @@ import './components/validate-request-form';
 import './components/adapt';
 import './components/plyr';
 import './components/show-more';
+import './components/map';
