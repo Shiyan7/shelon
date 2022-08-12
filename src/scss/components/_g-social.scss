@@ -29,6 +29,11 @@
     border-radius: 100%;
     transition: border-color 0.3s;
 
+    @media (max-width: 576px) {
+      width: 44px;
+      height: 44px;
+    }
+
     &:hover {
       border-color: var(--color-main);
     }
@@ -38,6 +43,11 @@
       width: 24px;
       height: 24px;
       fill: var(--color-main);
+
+      @media (max-width: 576px) {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }
