@@ -1,0 +1,1 @@
+require('goodshare.js')

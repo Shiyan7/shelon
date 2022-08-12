@@ -4369,6 +4369,11 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
+goodshare.js@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/goodshare.js/-/goodshare.js-6.2.1.tgz#b50717789571c89522c193cd74820dfac83d0254"
+  integrity sha512-ImSDMquXjRGceLOfskwZajEwSdNmrIlvAzc0MzyTE6U4CqPQRBF2aDlttqpxKahSpQuI+k4GRv1qIXU6qknsNg==
+
 got@^7.0.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/got/-/got-7.1.0.tgz#05450fd84094e6bbea56f451a43a9c289166385a"

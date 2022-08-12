@@ -20,6 +20,7 @@ html {
   min-width: var(--min-width);
   min-height: 100%;
   font-size: 16px;
+  counter-reset: counter;
   color: var(--color-text);
 }
 

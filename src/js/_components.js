@@ -9,3 +9,5 @@ import './components/plyr';
 import './components/show-more';
 import './components/map';
 import './components/tabs';
+import './components/goodshare';
+import './components/similar-slider';
