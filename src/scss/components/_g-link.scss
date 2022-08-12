@@ -26,4 +26,13 @@
     fill: currentColor;
     transition: transform 0.3s;
   }
+
+  &--more {
+
+    &:hover {
+      svg {
+        transform: rotate(-30deg);
+      }
+    }
+  }
 }
