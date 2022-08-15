@@ -27,6 +27,7 @@
   }
 
   &__map {
+    position: relative;
     margin: 0 auto;
     max-width: calc(1620px + (var(--container-offset) * 2));
     padding-bottom: 150px;
@@ -45,7 +46,6 @@
   &-point {
     position: absolute;
     cursor: pointer;
-    display: none;
 
     &:hover {
       .map-point__icon:before {
