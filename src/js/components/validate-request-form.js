@@ -25,6 +25,15 @@ const rules = [
         errorMessage: errorMessage
       },
     ]
+  },
+  {
+    ruleSelector: ".validate-checkbox",
+    errorsContainer: '.g-checkbox',
+    rules: [
+      {
+        rule: 'required',
+      },
+    ],
   }
 ]
 

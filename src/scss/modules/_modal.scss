@@ -141,9 +141,7 @@
       max-width: 330px;
       font-size: 12px;
       line-height: 16.8px;
-      padding-left: 22px;
       color: var(--color-gray);
-      margin-top: 20px;
 
       @media (max-width: 576px) {
         max-width: 100%;
@@ -157,18 +155,15 @@
           text-decoration: none;
         }
       }
+    }
 
-      &:before {
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        top: 0;
-        left: 0;
-        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='11' height='11' rx='1.5' fill='%23999999'/%3E%3Cpath d='M9.94055 3.88051L9.33446 3.27441L5.09186 7.51701L2.66749 5.09264L2.0614 5.69873L5.09181 8.72924L9.94055 3.88051Z' fill='white'/%3E%3Crect x='0.5' y='0.5' width='11' height='11' rx='1.5' stroke='%23999999'/%3E%3C/svg%3E%0A");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
+    &__checkbox {
+      margin-right: 10px;
+    }
+
+    &__policy {
+      display: flex;
+      margin-top: 20px;
     }
   }
 }

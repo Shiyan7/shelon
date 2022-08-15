@@ -25,6 +25,15 @@ const rules = [
         errorMessage: errorMessage
       },
     ]
+  },
+  {
+    ruleSelector: ".validate-checkbox",
+    errorsContainer: '.g-checkbox',
+    rules: [
+      {
+        rule: 'required',
+      },
+    ],
   }
 ]
 
@@ -33,4 +42,7 @@ const onSuccess = () => {
   modal.open("thank")
 }
 
-document.addEventListener("DOMContentLoaded", () => validateForms('#feedback-form', rules, onSuccess))
+const onFail = (e) => {
+}
+
+document.addEventListener("DOMContentLoaded", () => validateForms('#feedback-form', rules, onSuccess, onFail))

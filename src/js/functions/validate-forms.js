@@ -38,8 +38,10 @@ export const validateForms = (selector, rules, onSuccess, onFail) => {
     },
   });
 
-  for (let item of rules) {
-    validation.addField(item.ruleSelector, item.rules);
+  for (const item of rules) {
+    const {ruleSelector, rules, errorsContainer} = item
+
+    validation.addField(ruleSelector, rules, {errorsContainer});
   }
 
   validation.onFail(() => {

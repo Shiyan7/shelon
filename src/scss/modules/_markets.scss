@@ -46,6 +46,7 @@
   &-point {
     position: absolute;
     cursor: pointer;
+    display: none;
 
     &:hover {
       .map-point__icon:before {
