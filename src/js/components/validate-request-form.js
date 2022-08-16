@@ -10,20 +10,14 @@ const rules = [
   {
     ruleSelector: ".validate-name",
     rules: [
-      {
-        rule: 'required',
-        errorMessage: errorMessage
-      }
+      {rule: 'required', errorMessage}
     ]
   },
   {
     tel: true,
     ruleSelector: ".validate-tel",
     rules: [
-      {
-        rule: 'required',
-        errorMessage: errorMessage
-      },
+      {rule: 'required', errorMessage}
     ]
   },
   {
@@ -42,4 +36,7 @@ const onSuccess = () => {
   modal.open("thank")
 }
 
-document.addEventListener("DOMContentLoaded", () => validateForms('#request-form', rules, onSuccess))
+const onFail = () => {
+}
+
+document.addEventListener("DOMContentLoaded", () => validateForms('#request-form', rules, onSuccess, onFail))
