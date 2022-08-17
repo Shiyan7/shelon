@@ -11,3 +11,4 @@ import './components/map';
 import './components/tabs';
 import './components/goodshare';
 import './components/similar-slider';
+import './components/dotted-map';
