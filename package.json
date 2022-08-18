@@ -59,7 +59,6 @@
   "dependencies": {
     "@popperjs/core": "^2.11.2",
     "aos": "^2.3.4",
-    "dotted-map": "^2.2.3",
     "gh-pages": "^4.0.0",
     "goodshare.js": "^6.2.1",
     "graph-modal": "^1.0.4",
