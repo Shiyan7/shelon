@@ -9,5 +9,6 @@ import './components/plyr';
 import './components/show-more';
 import './components/map';
 import './components/tabs';
+import './components/post-slider';
 import './components/goodshare';
 import './components/similar-slider';

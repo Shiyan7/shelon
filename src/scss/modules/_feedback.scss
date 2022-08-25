@@ -133,6 +133,16 @@
       }
     }
 
+    &__captcha {
+      display: block;
+
+      img {
+        display: block;
+        width: 297px;
+        height: 80px;
+      }
+    }
+
     &__btn {
       margin-right: 30px;
       flex-shrink: 0;

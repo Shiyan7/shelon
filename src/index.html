@@ -4,15 +4,17 @@
 
 <body class="page__body">
   <div class="site-container">
-    @include('partials/header.html')
-    <main class="main">
-      @include('partials/hero.html')
-      @include('partials/about-section.html')
-      @include('partials/members.html')
-      @include('partials/news-section.html')
-      @include('partials/feedback.html')
-    </main>
-    @include('partials/footer.html')
+    <div class="fullpage">
+      @include('partials/header.html')
+      <main class="main">
+        @include('partials/hero.html')
+        @include('partials/about-section.html')
+        @include('partials/members.html')
+        @include('partials/news-section.html')
+        @include('partials/feedback.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
     @include('partials/modals.html')
   </div>
 </body>

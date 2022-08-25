@@ -3,6 +3,8 @@
   background-color: var(--color-text);
   height: 100vh;
   min-height: 500px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
   @media (max-width: 576px) {
     min-height: 450px;

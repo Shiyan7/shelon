@@ -64,6 +64,10 @@
       }
     }
 
+    .g-burger {
+      color: var(--color-dark);
+    }
+
     .lang-dropdown {
       &__btn {
         color: var(--color-white);
@@ -106,6 +110,11 @@
     @media (max-width: 1365px) {
       grid-column: 2 span;
     }
+
+    @media (max-width: 1200px) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__logo {
@@ -123,7 +132,6 @@
 
     @media (max-width: 1365px) {
       grid-column: 6 span;
-      padding-left: 20px;
     }
 
     @media (max-width: 1200px) {
@@ -192,10 +200,6 @@
     width: 24px;
     height: 24px;
     color: var(--header-color);
-
-    @media (max-width: 1200px) {
-      display: none;
-    }
 
     svg {
       display: block;

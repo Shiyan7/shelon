@@ -5,7 +5,7 @@
         <use xlink:href="img/sprite.svg#cross"></use>
       </svg>
     </button>
-    <h2 class="g-title modal__title">Заказать звонок</h2>
+    <span class="g-title modal__title">Заказать звонок</span>
     <p class="modal__desc">Оставьте заявку и в ближайшее время наш менеджер свяжется с вами для уточнений деталей.</p>
     <form action="#" class="modal-form" id="request-form">
       <label class="g-input g-input--required modal-form__input">
@@ -24,6 +24,9 @@
         <span class="g-input__caption">Комментарий</span>
         <input type="text" class="input-reset g-input__input" name="message" placeholder="Дополнительная информация">
       </label>
+      <div class="modal-form__captcha">
+        <img src="img/captcha.jpg" alt="">
+      </div>
       <div class="modal-form__bottom">
         <button class="btn-reset g-btn g-btn--fill modal__btn">Оформить заявку</button>
         <div class="modal-form__policy">
@@ -44,7 +47,7 @@
         <use xlink:href="img/sprite.svg#cross"></use>
       </svg>
     </button>
-    <h2 class="g-title modal__title">Спасибо за заявку!</h2>
+    <span class="g-title modal__title">Спасибо за заявку!</span>
     <p class="modal__desc">Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
     <a href="/" class="g-btn g-btn--fill modal__btn">На главную</a>
   </div>
