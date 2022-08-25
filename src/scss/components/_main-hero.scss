@@ -1,14 +1,9 @@
 .main-hero {
   position: relative;
-  --color-lines: rgba(255,255,255,0.2);
   height: 432px;
 
   @media (max-width: 576px) {
     height: 315px;
-  }
-
-  .lines {
-    z-index: 3;
   }
 
   &:before {
