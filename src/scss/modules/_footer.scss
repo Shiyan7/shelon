@@ -1,6 +1,8 @@
 .footer {
   color: var(--color-white);
   background-color: #4d4d4c;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
   &__container {
     padding-top: 80px;

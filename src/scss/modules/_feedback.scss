@@ -1,6 +1,8 @@
 .feedback {
   position: relative;
   background-color: var(--color-alabaster);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
   &::before {
     content: "";
