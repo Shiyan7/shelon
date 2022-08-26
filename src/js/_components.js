@@ -12,3 +12,4 @@ import './components/tabs';
 import './components/post-slider';
 import './components/goodshare';
 import './components/similar-slider';
+import './components/fullpage';

@@ -1,9 +1,6 @@
 .about-section {
   position: relative;
   background-color: var(--color-alabaster);
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100vh;
 
   &__container {
     position: relative;

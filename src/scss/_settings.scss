@@ -35,7 +35,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden;
+  // overflow: hidden;
 
   // @include footerToBottom();
 }
@@ -95,15 +95,4 @@ a {
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
-}
-
-.fullpage {
-  position: relative;
-  z-index: 200;
-  scroll-snap-destination: 0 0;
-  display: block;
-  height: var(--vh, 100vh);
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }

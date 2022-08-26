@@ -1,8 +1,5 @@
 .members {
   position: relative;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100vh;
 
   &:before {
     content: "";
@@ -53,15 +50,11 @@
     position: relative;
     display: flex;
     width: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 
     @media (max-width: 1024px) {
       flex-direction: column;
-      padding-bottom: 70px;
-    }
-
-    @media (max-width: 576px) {
-      padding-bottom: 40px;
+      padding-bottom: 0;
     }
   }
 
