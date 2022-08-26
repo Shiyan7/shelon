@@ -23,40 +23,57 @@
         </li>
       </ul>
     </div>
-    <div class="history-tabs tabs" data-tabs="tab">
-      <div class="history-tabs__nav">
-        <ul class="list-reset tabs__nav">
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn tabs__nav-btn--active" type="button">2015</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn" type="button">2016</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn" type="button">2017</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn" type="button">2018</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn" type="button">2019</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn" type="button">2020</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn" type="button">2021</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn" type="button">2022</button>
-          </li>
-          <li class="tabs__nav-item">
-            <button class="btn-reset tabs__nav-btn tabs__nav-btn--disabled" type="button">2023</button>
-          </li>
-        </ul>
+    <div class="history-tabs tabs">
+      <div class="tabs__nav-wrapper">
+        <div class="history-tabs__nav swiper swiper-tabs">
+          <div class="tabs__nav swiper-wrapper">
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn tabs__nav-btn--active" data-tabs-path="2008">2008</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2009">2009</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2010">2010</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2011">2011</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2012">2012</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2013">2013</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2014">2014</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2015">2015</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2016">2016</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2017">2017</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2018">2018</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2019">2019</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2021">2020</button>
+            </div>
+            <div class="swiper-slide tabs__nav-item">
+              <button class="btn-reset tabs__nav-btn" data-tabs-path="2022">2022</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container tabs__content">
-        <div class="tabs__panel tabs__panel--active history-content">
+        <div class="tabs__panel tabs__panel--active history-content" data-tabs-target="2008">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>
@@ -66,7 +83,7 @@
               alt="Лесопромышленный комплекс SHELON">
           </picture>
         </div>
-        <div class="tabs__panel history-content">
+        <div class="tabs__panel history-content" data-tabs-target="2009">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>
@@ -76,7 +93,7 @@
               alt="Лесопромышленный комплекс SHELON">
           </picture>
         </div>
-        <div class="tabs__panel history-content">
+        <div class="tabs__panel history-content" data-tabs-target="2010">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>
@@ -86,7 +103,7 @@
               alt="Лесопромышленный комплекс SHELON">
           </picture>
         </div>
-        <div class="tabs__panel history-content">
+        <div class="tabs__panel history-content" data-tabs-target="2011">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>
@@ -96,7 +113,7 @@
               alt="Лесопромышленный комплекс SHELON">
           </picture>
         </div>
-        <div class="tabs__panel history-content">
+        <div class="tabs__panel history-content" data-tabs-target="2012">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>
@@ -106,7 +123,7 @@
               alt="Лесопромышленный комплекс SHELON">
           </picture>
         </div>
-        <div class="tabs__panel history-content">
+        <div class="tabs__panel history-content" data-tabs-target="2013">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>
@@ -116,7 +133,7 @@
               alt="Лесопромышленный комплекс SHELON">
           </picture>
         </div>
-        <div class="tabs__panel history-content">
+        <div class="tabs__panel history-content" data-tabs-target="2014">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>
@@ -126,7 +143,77 @@
               alt="Лесопромышленный комплекс SHELON">
           </picture>
         </div>
-        <div class="tabs__panel history-content">
+        <div class="tabs__panel history-content" data-tabs-target="2015">
+          <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
+            базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
+          <picture>
+            <source srcset="img/shelon.avif" type="image/avif">
+            <source srcset="img/shelon.webp" type="image/webp">
+            <img loading="lazy" src="img/shelon.jpg" class="history-content__image" width="720" height="500"
+              alt="Лесопромышленный комплекс SHELON">
+          </picture>
+        </div>
+        <div class="tabs__panel history-content" data-tabs-target="2016">
+          <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
+            базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
+          <picture>
+            <source srcset="img/shelon.avif" type="image/avif">
+            <source srcset="img/shelon.webp" type="image/webp">
+            <img loading="lazy" src="img/shelon.jpg" class="history-content__image" width="720" height="500"
+              alt="Лесопромышленный комплекс SHELON">
+          </picture>
+        </div>
+        <div class="tabs__panel history-content" data-tabs-target="2017">
+          <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
+            базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
+          <picture>
+            <source srcset="img/shelon.avif" type="image/avif">
+            <source srcset="img/shelon.webp" type="image/webp">
+            <img loading="lazy" src="img/shelon.jpg" class="history-content__image" width="720" height="500"
+              alt="Лесопромышленный комплекс SHELON">
+          </picture>
+        </div>
+        <div class="tabs__panel history-content" data-tabs-target="2018">
+          <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
+            базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
+          <picture>
+            <source srcset="img/shelon.avif" type="image/avif">
+            <source srcset="img/shelon.webp" type="image/webp">
+            <img loading="lazy" src="img/shelon.jpg" class="history-content__image" width="720" height="500"
+              alt="Лесопромышленный комплекс SHELON">
+          </picture>
+        </div>
+        <div class="tabs__panel history-content" data-tabs-target="2019">
+          <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
+            базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
+          <picture>
+            <source srcset="img/shelon.avif" type="image/avif">
+            <source srcset="img/shelon.webp" type="image/webp">
+            <img loading="lazy" src="img/shelon.jpg" class="history-content__image" width="720" height="500"
+              alt="Лесопромышленный комплекс SHELON">
+          </picture>
+        </div>
+        <div class="tabs__panel history-content" data-tabs-target="2020">
+          <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
+            базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
+          <picture>
+            <source srcset="img/shelon.avif" type="image/avif">
+            <source srcset="img/shelon.webp" type="image/webp">
+            <img loading="lazy" src="img/shelon.jpg" class="history-content__image" width="720" height="500"
+              alt="Лесопромышленный комплекс SHELON">
+          </picture>
+        </div>
+        <div class="tabs__panel history-content" data-tabs-target="2021">
+          <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
+            базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
+          <picture>
+            <source srcset="img/shelon.avif" type="image/avif">
+            <source srcset="img/shelon.webp" type="image/webp">
+            <img loading="lazy" src="img/shelon.jpg" class="history-content__image" width="720" height="500"
+              alt="Лесопромышленный комплекс SHELON">
+          </picture>
+        </div>
+        <div class="tabs__panel history-content" data-tabs-target="2022">
           <p class="history-content__text">В год 30-летия GS Group реализует несколько прорывных отраслевых проектов. На
             базе предприятий «Технополиса GS» запущено крупнейшее в РФ производство светодиодов под брендом GS LED.</p>
           <picture>

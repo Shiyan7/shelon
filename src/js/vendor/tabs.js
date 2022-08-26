@@ -110,5 +110,7 @@ export class Tabs {
       this.tabsBtns[index].classList.add('tabs__nav-btn--active');
 
       this.options.isChanged(this);
+
+      console.log(newTab.nextElementSibling);
     }
   }
