@@ -13,3 +13,4 @@ import './components/post-slider';
 import './components/goodshare';
 import './components/similar-slider';
 import './components/fullpage';
+import './components/post-gallery';
