@@ -1,5 +1,6 @@
 .news-section {
   position: relative;
+  min-height: 100vh;
 
   &__container {
     position: relative;
@@ -7,11 +8,10 @@
     justify-content: center;
     flex-direction: column;
     min-height: inherit;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 80px;
 
     @media (max-width: 1024px) {
-      padding-top: 120px;
       padding-bottom: 50px;
     }
 
