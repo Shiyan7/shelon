@@ -2,10 +2,16 @@
   position: relative;
   min-height: 100vh;
 
-  &:not(.members--active) {
+  &:not(.member-active) {
+
+    .members__wrapper {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
     .members__wrapper:first-child {
-      opacity: 1;
-      visibility: visible;
+      opacity: 1 !important;
+      visibility: visible !important;
     }
   }
 
