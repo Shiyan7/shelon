@@ -17,16 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
       autoAlpha: 1
     }, 1);
 
-  const some = new ScrollMagic.Scene({
-      triggerElement: container,
-      triggerHook: 'onLeave',
-      duration: "200%"
-    })
-    .setPin(container)
-    .setTween(animation)
-    .addIndicators()
-    .addTo(controller);
-
-  console.log(some);
+  new ScrollMagic.Scene({
+    triggerElement: container,
+    triggerHook: 'onLeave',
+    duration: "200%"
+  })
+  .setClassToggle('.members', 'members--active')
+  .setPin(container)
+  .setTween(animation)
+  .addIndicators()
+  .addTo(controller);
 
 })
