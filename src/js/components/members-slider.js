@@ -1,21 +1,32 @@
+import ScrollMagic from 'scrollmagic'
+import { TweenMax, TimelineMax } from "gsap";
+import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
+
 document.addEventListener('DOMContentLoaded', () => {
-  const membersItems = document.querySelectorAll('.members-item__title');
-  const membersSlides = document.querySelectorAll('.members-slide')
+  const controller = new ScrollMagic.Controller();
 
-  membersItems.forEach(el => {
-    const parent = el.closest('.members-item')
-    const id = parent?.dataset.slidePath;
+  const container = document.querySelector(".members");
 
-    el.addEventListener('click', () => {
+  const animation = new TimelineMax()
+  .staggerFromTo(".js-section", 0, {
+      autoAlpha: 0
+    },
+    {
+      autoAlpha: 1
+    }, 1);
 
-      const target = document.querySelector(`.members-slide[data-slide-target='${id}']`)
-
-      membersSlides?.forEach(slide => {
-        membersItems.forEach(el => el.closest('.members-item').classList.remove('active'))
-        slide?.classList.remove('active')
-        target?.classList.add('active')
-        parent?.classList.add('active')
-      })
+  const some = new ScrollMagic.Scene({
+      triggerElement: container,
+      triggerHook: 'onLeave',
+      duration: "200%"
     })
-  })
+    .setPin(container)
+    .setTween(animation)
+    .addIndicators()
+    .addTo(controller);
+
+  console.log(some);
+
 })

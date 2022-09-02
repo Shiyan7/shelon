@@ -5,14 +5,14 @@
 <body class="page__body">
   <div class="site-container">
     @include('partials/header.html')
-    <div id="fullpage">
+    <main class="main">
       @include('partials/hero.html')
       @include('partials/about-section.html')
       @include('partials/members.html')
       @include('partials/news-section.html')
       @include('partials/feedback.html')
-      @include('partials/footer.html')
-    </div>
+    </main>
+    @include('partials/footer.html')
     @include('partials/modals.html')
   </div>
 </body>
