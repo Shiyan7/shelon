@@ -24,10 +24,10 @@ html {
   color: var(--color-text);
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
+.homepage {
+  & > div[style] {
+    clip: rect(0 0 0 0);
+  }
 }
 
 a {
