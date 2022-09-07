@@ -29,23 +29,35 @@
   <script type="text/javascript" src="https://unpkg.com/fullpage.js@3.1.2/dist/fullpage.extensions.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const header = document.querySelector('.header');
+      if(window.outerWidth >= 1024) {
+        const header = document.querySelector('.header');
 
-      new fullpage('#fullpage', {
-        scrollingSpeed: 600,
-        normalScrollElements: '.modal',
-        scrollBar: true,
-        scrollHorizontally: true,
-        onLeave: function(section, slide, position, direction){
-          if(!slide.isFirst) {
-            header?.classList.add('header--fixed');
-            header?.classList.add('header--light');
-          } else {
-            header?.classList.remove('header--fixed');
-            header?.classList.remove('header--light');
+        new fullpage('#fullpage', {
+          scrollingSpeed: 600,
+          normalScrollElements: '.modal',
+          scrollHorizontally: true,
+          verticalCentered: false,
+
+          onLeave: function(section, slide, position, direction){
+            if(!slide.isFirst) {
+              header?.classList.add('header--fixed');
+              header?.classList.add('header--light');
+            } else {
+              header?.classList.remove('header--fixed');
+              header?.classList.remove('header--light');
+            }
+          },
+          afterSlideLoad: function() {
+            const item = document.querySelector('.members-item.active');
+            const id = item.dataset.slidePath
+            document.querySelector('.members-slide.active')?.classList.remove('active')
+
+            const target = document.querySelector(`.members-slide[data-slide-target='${id}']`)
+
+            target.classList.add('active')
           }
-        }
-      });
+        });
+      }
     });
   </script>
   <script defer src="js/main.js"></script>
@@ -269,66 +281,67 @@
   </div>
 </section>
       <section class="members section fp-auto-height">
-  <div class="members__wrapper slide">
-    <div class="members__container">
-      <div class="members__left">
-        <h2 class="g-title g-title--lg members__title">Участники комплекса</h2>
-        <ul class="list-reset members-list">
-          <li class="members-list__item members-item active">
-            <h3 class="members-item__title">Судома</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="sudoma.html" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Дедовичская Лесная Компания</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Экополис</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Варяжский композит</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="members-slide">
+  
+  <div class="members__container">
+    <div class="members__left">
+      <h2 class="g-title g-title--lg members__title">Участники комплекса</h2>
+      <ul class="list-reset members-list">
+        <li class="members-list__item slide members-item active" data-slide-path="1">
+          <h3 class="members-item__title">Судома</h3>
+          <div class="members-item__content">
+            <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
+              восстановление лесного фонда</p>
+            <a href="sudoma.html" class="g-link members-item__link">
+              Подробнее
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="members-list__item slide members-item" data-slide-path="2">
+          <h3 class="members-item__title">Дедовичская Лесная Компания</h3>
+          <div class="members-item__content">
+            <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
+              восстановление лесного фонда</p>
+            <a href="#" class="g-link members-item__link">
+              Подробнее
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="members-list__item slide members-item" data-slide-path="3">
+          <h3 class="members-item__title">Экополис</h3>
+          <div class="members-item__content">
+            <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
+              восстановление лесного фонда</p>
+            <a href="#" class="g-link members-item__link">
+              Подробнее
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="members-list__item slide members-item" data-slide-path="4">
+          <h3 class="members-item__title">Варяжский композит</h3>
+          <div class="members-item__content">
+            <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
+              восстановление лесного фонда</p>
+            <a href="#" class="g-link members-item__link">
+              Подробнее
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="members-images">
+      <div class="members-slide active" data-slide-target="1">
         <picture>
           <source srcset="img/members-1.avif" type="image/avif">
           <source srcset="img/members-1.webp" type="image/webp">
@@ -336,68 +349,7 @@
             alt="Дедовичская Лесная Компания">
         </picture>
       </div>
-    </div>
-  </div>
-  <div class="members__wrapper slide">
-    <div class="members__container">
-      <div class="members__left">
-        <h2 class="g-title g-title--lg members__title">Участники комплекса</h2>
-        <ul class="list-reset members-list">
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Судома</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="sudoma.html" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item active">
-            <h3 class="members-item__title">Дедовичская Лесная Компания</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Экополис</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Варяжский композит</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="members-slide">
+      <div class="members-slide" data-slide-target="2">
         <picture>
           <source srcset="img/members-2.avif" type="image/avif">
           <source srcset="img/members-2.webp" type="image/webp">
@@ -405,68 +357,7 @@
             alt="Дедовичская Лесная Компания">
         </picture>
       </div>
-    </div>
-  </div>
-  <div class="members__wrapper slide">
-    <div class="members__container">
-      <div class="members__left">
-        <h2 class="g-title g-title--lg members__title">Участники комплекса</h2>
-        <ul class="list-reset members-list">
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Судома</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="sudoma.html" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Дедовичская Лесная Компания</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item active">
-            <h3 class="members-item__title">Экополис</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Варяжский композит</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="members-slide">
+      <div class="members-slide" data-slide-target="3">
         <picture>
           <source srcset="img/members-1.avif" type="image/avif">
           <source srcset="img/members-1.webp" type="image/webp">
@@ -474,68 +365,7 @@
             alt="Дедовичская Лесная Компания">
         </picture>
       </div>
-    </div>
-  </div>
-  <div class="members__wrapper slide">
-    <div class="members__container">
-      <div class="members__left">
-        <h2 class="g-title g-title--lg members__title">Участники комплекса</h2>
-        <ul class="list-reset members-list">
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Судома</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="sudoma.html" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Дедовичская Лесная Компания</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item">
-            <h3 class="members-item__title">Экополис</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="members-list__item members-item active">
-            <h3 class="members-item__title">Варяжский композит</h3>
-            <div class="members-item__content">
-              <p class="members-item__desc">Предприятие, которое осуществляет работы по заготовке древесины, выполняет
-                восстановление лесного фонда</p>
-              <a href="#" class="g-link members-item__link">
-                Подробнее
-                <svg>
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="members-slide">
+      <div class="members-slide" data-slide-target="4">
         <picture>
           <source srcset="img/members-2.avif" type="image/avif">
           <source srcset="img/members-2.webp" type="image/webp">

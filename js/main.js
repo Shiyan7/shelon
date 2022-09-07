@@ -338,7 +338,25 @@ document.addEventListener("DOMContentLoaded", () => {
   \*********************************************/
 /***/ (() => {
 
-
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.outerWidth <= 1024) {
+    const membersItems = document.querySelectorAll('.members-item__title');
+    const membersSlides = document.querySelectorAll('.members-slide');
+    membersItems === null || membersItems === void 0 ? void 0 : membersItems.forEach(el => {
+      const parent = el.closest('.members-item');
+      const id = parent === null || parent === void 0 ? void 0 : parent.dataset.slidePath;
+      el.addEventListener('click', () => {
+        const target = document.querySelector(".members-slide[data-slide-target='".concat(id, "']"));
+        membersSlides === null || membersSlides === void 0 ? void 0 : membersSlides.forEach(slide => {
+          membersItems.forEach(el => el.closest('.members-item').classList.remove('active'));
+          slide === null || slide === void 0 ? void 0 : slide.classList.remove('active');
+          target === null || target === void 0 ? void 0 : target.classList.add('active');
+          parent === null || parent === void 0 ? void 0 : parent.classList.add('active');
+        });
+      });
+    });
+  }
+});
 
 /***/ }),
 
