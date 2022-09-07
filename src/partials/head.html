@@ -24,26 +24,38 @@
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/fullpage.scrollHorizontally.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/fullpage.js@3.1.2/dist/fullpage.extensions.min.js"></script>
+  <script src="js/fullpage.extensions.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const header = document.querySelector('.header');
+      if(window.outerWidth >= 1024) {
+        const header = document.querySelector('.header');
 
-      new fullpage('#fullpage', {
-        scrollingSpeed: 600,
-        normalScrollElements: '.modal',
-        scrollBar: true,
-        scrollHorizontally: true,
-        onLeave: function(section, slide, position, direction){
-          if(!slide.isFirst) {
-            header?.classList.add('header--fixed');
-            header?.classList.add('header--light');
-          } else {
-            header?.classList.remove('header--fixed');
-            header?.classList.remove('header--light');
+        new fullpage('#fullpage', {
+          scrollingSpeed: 600,
+          normalScrollElements: '.modal',
+          scrollHorizontally: true,
+          verticalCentered: false,
+
+          onLeave: function(section, slide, position, direction){
+            if(!slide.isFirst) {
+              header?.classList.add('header--fixed');
+              header?.classList.add('header--light');
+            } else {
+              header?.classList.remove('header--fixed');
+              header?.classList.remove('header--light');
+            }
+          },
+          afterSlideLoad: function() {
+            const item = document.querySelector('.members-item.active');
+            const id = item.dataset.slidePath
+            document.querySelector('.members-slide.active')?.classList.remove('active')
+
+            const target = document.querySelector(`.members-slide[data-slide-target='${id}']`)
+
+            target.classList.add('active')
           }
-        }
-      });
+        });
+      }
     });
   </script>
   <script defer src="js/main.js"></script>
