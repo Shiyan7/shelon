@@ -87,6 +87,9 @@ html {
   counter-reset: counter;
   color: var(--color-text);
 }
+.page__body > div[style]:first-child {
+  display: none !important;
+}
 
 img {
   height: auto;
