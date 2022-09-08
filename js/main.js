@@ -225,12 +225,19 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', () => {
   if (window.outerWidth >= 1024) {
     const header = document.querySelector('.header');
-    new (_vendor_extensions__WEBPACK_IMPORTED_MODULE_1___default())('#fullpage', {
+    const fp = new (_vendor_extensions__WEBPACK_IMPORTED_MODULE_1___default())('#fullpage', {
       scrollingSpeed: 600,
       normalScrollElements: '.modal',
       scrollHorizontally: true,
       verticalCentered: false,
+      scrollBar: true,
+      controlArrows: false,
+      credits: {
+        enabled: false
+      },
       onLeave: function (section, slide, position, direction) {
+        fp.setScrollingSpeed(600);
+
         if (!slide.isFirst) {
           header === null || header === void 0 ? void 0 : header.classList.add('header--fixed');
           header === null || header === void 0 ? void 0 : header.classList.add('header--light');
@@ -238,6 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
           header === null || header === void 0 ? void 0 : header.classList.remove('header--fixed');
           header === null || header === void 0 ? void 0 : header.classList.remove('header--light');
         }
+      },
+      onSlideLeave: function () {
+        fp.setScrollingSpeed(400);
       },
       afterSlideLoad: function () {
         var _document$querySelect;
@@ -374,23 +384,23 @@ document.addEventListener("DOMContentLoaded", () => {
 /***/ (() => {
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.outerWidth <= 1024) {
-    const membersItems = document.querySelectorAll('.members-item__title');
-    const membersSlides = document.querySelectorAll('.members-slide');
-    membersItems === null || membersItems === void 0 ? void 0 : membersItems.forEach(el => {
-      const parent = el.closest('.members-item');
-      const id = parent === null || parent === void 0 ? void 0 : parent.dataset.slidePath;
-      el.addEventListener('click', () => {
-        const target = document.querySelector(".members-slide[data-slide-target='".concat(id, "']"));
-        membersSlides === null || membersSlides === void 0 ? void 0 : membersSlides.forEach(slide => {
-          membersItems.forEach(el => el.closest('.members-item').classList.remove('active'));
+  const membersItems = document.querySelectorAll('.members-item__title');
+  const membersSlides = document.querySelectorAll('.members-slide');
+  membersItems === null || membersItems === void 0 ? void 0 : membersItems.forEach(el => {
+    const parent = el.closest('.members-item');
+    const id = parent === null || parent === void 0 ? void 0 : parent.dataset.slidePath;
+    el.addEventListener('click', () => {
+      const target = document.querySelector(".members-slide[data-slide-target='".concat(id, "']"));
+      membersSlides === null || membersSlides === void 0 ? void 0 : membersSlides.forEach(slide => {
+        membersItems.forEach(el => el.closest('.members-item').classList.remove('active'));
+        setTimeout(() => {
           slide === null || slide === void 0 ? void 0 : slide.classList.remove('active');
           target === null || target === void 0 ? void 0 : target.classList.add('active');
-          parent === null || parent === void 0 ? void 0 : parent.classList.add('active');
-        });
+        }, 400);
+        parent === null || parent === void 0 ? void 0 : parent.classList.add('active');
       });
     });
-  }
+  });
 });
 
 /***/ }),
