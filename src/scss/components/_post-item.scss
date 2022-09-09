@@ -1,11 +1,6 @@
 .post-item {
-  padding: 40px 50px 39px;
+  padding: 30px 40px;
   background-color: var(--color-white);
-
-  &--lg {
-    padding: 50px;
-    padding-bottom: 39px;
-  }
 
   @media (max-width: 768px) {
     padding: 40px 30px;
