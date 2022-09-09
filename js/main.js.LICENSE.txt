@@ -1,0 +1,23 @@
+/*!
+ * dist/inputmask
+ * https://github.com/RobinHerbots/Inputmask
+ * Copyright (c) 2010 - 2021 Robin Herbots
+ * Licensed under the MIT license
+ * Version: 5.0.7
+ */
+
+/*!
+ * fullPage 3.1.2 - Extensions 0.2.2
+ * https://github.com/alvarotrigo/fullPage.js
+ * @license http://alvarotrigo.com/fullPage/extensions/#license
+ *
+ * Copyright (C) 2018 alvarotrigo.com - A project by Alvaro Trigo
+ */
+
+/*!
+ * fullpage.js Scroll Horizontally Extension 0.0.4 for fullPage.js v3
+ * https://github.com/alvarotrigo/fullPage.js
+ *
+ * @license This code has been bought from www.alvarotrigo.com/fullPage/extensions/ and it is not free to use or distribute.
+ * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
+ */
