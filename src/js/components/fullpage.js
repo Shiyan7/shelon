@@ -2,7 +2,7 @@ import '../vendor/scrollHorizontally'
 import fullpage from '../vendor/extensions'
 
 document.addEventListener('DOMContentLoaded', () => {
-  if(window.outerWidth >= 1024) {
+  if(window.outerWidth > 1024) {
     const header = document.querySelector('.header');
 
     const fp = new fullpage('#fullpage', {
