@@ -4,9 +4,10 @@
   justify-content: center;
   width: 56px;
   height: 56px;
+  color: var(--color-main);
   border: 1px solid #f5f5f5;
   border-radius: 100%;
-  transition: border-color 0.3s, opacity 0.3s;
+  transition: border-color 0.3s, opacity 0.3s, background-color 0.3s, color 0.3s;
 
   &.swiper-button-disabled {
     cursor: default;
@@ -21,12 +22,52 @@
     &:hover {
       border-color: var(--color-main);
     }
+
+    &.slider-btn--fill {
+      &:hover {
+        color: var(--color-main);
+        background-color: var(--color-white);
+        border-color: var(--color-white);
+      }
+    }
+  }
+
+  &--fill {
+    border-color: var(--color-main);
+    background-color: var(--color-main);
+    color: var(--color-white);
+
+    &.swiper-button-disabled {
+      opacity: 0.7;
+    }
   }
 
   svg {
     display: block;
     width: 16px;
     height: 16px;
-    fill: var(--color-main);
+    fill: currentColor;
+  }
+}
+
+.slider-pagination {
+  display: flex;
+  align-items: center;
+
+  .swiper-pagination-bullet {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-white);
+    border-radius: 100%;
+    transition: background-color 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &-active {
+      background-color: var(--color-main);
+    }
   }
 }
