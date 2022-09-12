@@ -2,6 +2,33 @@
   position: relative;
   min-height: 100vh;
 
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 267px;
+    height: 160px;
+    background-image: url("data:image/svg+xml,%3Csvg width='268' height='162' viewBox='0 0 268 162' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.309082 54.2401L0.309082 107.643L53.712 107.643L0.309082 54.2401Z' fill='%231E9848'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M107.026 54.3281L53.6238 54.3281L53.6238 107.73L107.026 54.3281Z' fill='%2358B847'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M53.711 107.643H0.308594L0.308594 161.046L53.711 107.643Z' fill='%231E9848'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M160.429 0.81L107.026 0.81L107.026 54.2124L160.429 0.81Z' fill='%2358B847'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M53.6541 107.702L53.6541 54.2987L0.251709 54.2987L53.6541 107.702Z' fill='%2358B847'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M107.026 54.2124V0.81L53.6238 0.81L107.026 54.2124Z' fill='%231E9848'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M267.251 54.2124V0.81L213.848 0.81L267.251 54.2124Z' fill='%2358B847'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M213.849 0.81V54.2124L267.251 54.2124L213.849 0.81Z' fill='%231F733A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M160.438 0.81V54.2124L213.84 54.2124L160.438 0.81Z' fill='%2358B847'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M53.6282 0.81L53.6282 54.2124L107.031 54.2124L53.6282 0.81Z' fill='%2358B847'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M213.84 54.2124V0.81L160.438 0.81L213.84 54.2124Z' fill='%231E592D'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.221436 54.3291L53.6238 0.926707L0.221436 0.926707L0.221436 54.3291Z' fill='%231F733A'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-height: 1050px) {
+      width: 217px;
+      height: 130px;
+    }
+
+    @media (max-height: 900px) {
+      width: 175px;
+      height: 105px;
+    }
+
+    @media (max-width: 1700px) {
+      display: none;
+    }
+  }
+
   &__container {
     position: relative;
     display: flex;
